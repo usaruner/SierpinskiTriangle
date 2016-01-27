@@ -19,6 +19,18 @@ x = mouseX;
 y = mouseY;
 
 }
+void keyPressed() {
+  if (key == CODED) {
+    if (keyCode == UP) {
+     z+=15;
+    } else if (keyCode == DOWN) {
+     z-=15;
+    } 
+  }
+  if(z <= 10){
+  z= 10;
+  }
+}
 void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   z-=e*15;
